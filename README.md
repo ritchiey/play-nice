@@ -6,7 +6,7 @@ Custom settings for developing your Ruby on Rails app without affecting the main
 Use this if you want to:
 
   - develop with a different version of ruby to what's in .ruby-version
-  - install extra gems like pry or spring without annoying other developers on the same project
+  - install extra gems like pry or spring without annoying other developers on tlcohe same project
   - customise your scripts and binstubs for the project without sharing
 
 Installation
@@ -25,9 +25,9 @@ Usage
 Run the `app/play-nice/init` script once when you start a shell to work on the project. You *could* add it to your .bash_profile or .zshrc but it's really a project specific thing so you probably don't want to do that.
 If you're using [tmuxinator](https://github.com/tmuxinator/tmuxinator), specify it in the project file with this line:
 
-    pre_window: . ./local/init
+    pre_window: . ./play-nice/init
 
- - Check your ruby version with `ruby -v`. It should be the one specifed in local/init instead of .ruby-version.
+ - Check your ruby version with `ruby -v`. It should be the one specifed in play-nice/init instead of .ruby-version.
 
  - Running bundle will now use the `play-nice/Gemfile.local` which happens to include your `Gemfile` as well as whatever
  gems you modify it to use.
