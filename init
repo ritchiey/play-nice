@@ -1,0 +1,33 @@
+# This script initializes your shell for development using your custom settings.
+# It should be run once for each shell session that you're developing in.
+#
+# If you're using tmuxinator, use the `pre_window` option to run this file once
+# for each window/pane. Eg:
+#
+#   pre_window: . ./play-nice/init
+#
+
+# Use a later version of Ruby than specified in the .ruby-version file
+
+# Specify the version you'd like to use locally
+local_ruby_version=2.1.2
+
+# Uncomment the appropriate line for your environment
+
+# RBENV
+export RBENV_VERSION=$local_ruby_version
+
+# RVM
+# TODO Add whatever method RVM uses of overriding ruby version
+
+# Pickup our local versions of any executables first
+export PATH=`pwd`/`dirname $0`/bin:$PATH
+
+# Use a custom gemfile which specifies our local gems and then includes
+# the standard Gemfile
+export BUNDLE_GEMFILE=`pwd`/play-nice/Gemfile.local
+
+# Create a gbundle (Global Bundle) alias that ignores the custom Gemfile
+# Main use is to update the standard Gemfile.lock after changing the standard
+# Gemfile.
+alias gbundle='bundle --gemfile Gemfile'

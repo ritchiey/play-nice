@@ -1,0 +1,28 @@
+source "https://rubygems.org"
+
+# Gems listed here will be loaded on your local machine but
+# not on the CI server or production environments so go nuts.
+#
+# This assumes that you've set $BUNDLE_GEMFILE appropriately
+# by running `. play-nice/init`
+
+group :development, :test do
+
+  # Preload Rails for faster startup
+  #gem "spring"
+  #gem "spring-commands-rspec"
+
+  # Enable breakpoints and code exploration
+  #gem 'pry'
+  #gem 'pry-rescue'
+  #gem 'pry-stack_explorer'
+  #gem 'pry-doc'
+  #gem 'pry-docmore'
+  #gem 'pry-rails'
+  #gem 'pry-byebug'
+  #gem 'bond'
+  #gem 'gist'
+
+end
+
+instance_eval(File.read(File.dirname(__FILE__) + "/../Gemfile"))
